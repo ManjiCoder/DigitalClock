@@ -49,8 +49,9 @@ setInterval(() => {
     else {
         // console.log('error')
     }
-    let displayTime = (`${hrs}: ${mins}: ${secs} ${ampm}`);
-    h2.innerText = displayTime;
     hrs = hr.innerText = hrs + ":";
     mins = min.innerText = mins + ":";
+
+    // let displayTime = (`${hrs}: ${mins}: ${secs} ${ampm}`); // This Is For Another Clock
+    // h2.innerText = displayTime; // This Is For Another Clock
 }, 1000);
