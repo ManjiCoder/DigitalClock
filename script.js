@@ -1,23 +1,21 @@
+// Set Interval With Arrow Function
 setInterval(() => {
     // Varaibles Declarations
     let h2 = document.querySelector('h2')
     let hr = document.getElementById('hr')
     let min = document.getElementById('min')
     let sec = document.getElementById('sec')
-    let pm = document.getElementById('AM_PM')
+    let ampm = document.getElementById('AM_PM')
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
     let secs = date.getSeconds();
 
-    // updating innerText
+    // Updating innerText
     hrs = hr.innerText = hrs;
+    // hrs = hr.innerText = 24;
     mins = min.innerText = mins;
     secs = sec.innerText = secs;
-    pm = pm.innerText = "AM";
-
-    // hrs = hr.innerText = hrs + ":";
-    // mins = min.innerText = mins + ":";
 
     // IF STATEMENT
     if (secs < 10) {
@@ -26,16 +24,33 @@ setInterval(() => {
     if (mins < 10) {
         mins = min.innerText = "0" + mins;
     }
-    if (hrs < 10) {
-        hrs = hr.innerText = "0" + hrs;
+    if (hrs <= 11) {
+        hrs = 12 - (-hrs);
+        ampm = ampm.innerText = "AM";
+        if (hrs < 10) {
+            hrs = hr.innerText = "0" + hrs;
+        }
     }
-    if (hrs < 24) {
+    if (hrs == 12) {
+        hrs = 12 - (-hrs);
+        ampm = ampm.innerText = "PM";
+    }
+    if (hrs == 24) {
+        hrs = hrs;
+        ampm = ampm.innerText = "AM";
+    }
+    if (hrs >= 13 | hrs <= 23) {
         hrs = hrs - 12;
-        pm = pm.innerText = "PM";
+        ampm = ampm.innerText = "PM";
+        if (hrs < 10) {
+            hrs = hr.innerText = "0" + hrs;
+        }
     }
     else {
         // console.log('error')
     }
-    let displayTime = (`${hrs}: ${mins}: ${secs} ${pm}`);
+    let displayTime = (`${hrs}: ${mins}: ${secs} ${ampm}`);
     h2.innerText = displayTime;
+    hrs = hr.innerText = hrs + ":";
+    mins = min.innerText = mins + ":";
 }, 1000);

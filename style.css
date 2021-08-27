@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap');
-/* CSS Reset */
 
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +14,11 @@
     width: 100%;
     height: 100vh;
     text-align: center;
+    font-family: 'Arima Madurai', cursive;
 }
 
-#clock {
+.wrap {
+    /* display: none; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,22 +31,13 @@
     border-radius: 50%;
     box-shadow: 0px 0px 5px 1px white;
 }
-.wrap{
-    display: none;
-}
+
 .heading {
     padding: 1.2rem 7px;
 }
 
-h1 {
-    font-family: 'Rampart One', cursive;
-    font-family: 'Arima Madurai', cursive;
-}
-
-.span {
-    /* font-family: 'Righteous', cursive; */
-    font-family: 'Arima Madurai', cursive;
-    font-size: 2.5rem;
+.hrs-mins {
+    font-size: 2.4rem;
     width: 55px;
 }
 
@@ -53,19 +45,30 @@ h1 {
     margin: 0 7px;
 }
 
-span {
-    /* font-family: 'Righteous', cursive; */
-    font-family: 'Arima Madurai', cursive;
-    font-size: 1.5rem;
+#sec, #AM_PM {
+    font-size: 1.4rem;
     font-weight: 900;
     width: 31px;
 }
 
-#clock {
-    font-family: 'Arima Madurai', cursive;
-    font-size: 2rem;
-}
-
 #AM_PM {
     margin-left: 4px;
+}
+
+/* ANOTHER CLOCK */
+
+#clock {
+    display: none;
+    /* display: flex; */
+    font-size: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    height: 226px;
+    width: 226px;
+    background: #00346F;
+    margin: 3rem auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px white;
 }
