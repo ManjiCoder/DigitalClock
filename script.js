@@ -1,16 +1,15 @@
 // Set Interval With Arrow Function
 setInterval(() => {
     // Varaibles Declarations
-    let h2 = document.querySelector('h2')
-    let hr = document.getElementById('hr')
-    let min = document.getElementById('min')
-    let sec = document.getElementById('sec')
-    let ampm = document.getElementById('AM_PM')
+    let hr = document.getElementById('hr');
+    let min = document.getElementById('min');
+    let sec = document.getElementById('sec');
+    let ampm = document.getElementById('AM_PM');
     let date = new Date();
     let hrs = date.getHours();
     let mins = date.getMinutes();
     let secs = date.getSeconds();
-
+    // let h2 = document.querySelector('h2'); // This Is For Another Clock & Not Important.
     // Updating innerText
     hrs = hr.innerText = hrs;
     // hrs = hr.innerText = 24;
@@ -47,11 +46,11 @@ setInterval(() => {
         }
     }
     else {
-        // console.log('error')
+        // console.log('error');
     }
     hrs = hr.innerText = hrs + ":";
     mins = min.innerText = mins + ":";
 
-    // let displayTime = (`${hrs}: ${mins}: ${secs} ${ampm}`); // This Is For Another Clock
-    // h2.innerText = displayTime; // This Is For Another Clock
+    // let displayTime = (`${hrs}: ${mins}: ${secs} ${ampm}`); // This Is For Another Clock & Not Important.
+    // h2.innerText = displayTime; // This Is For Another Clock & Not Important.
 }, 1000);
