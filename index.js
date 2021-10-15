@@ -10,7 +10,7 @@ setInterval(() => {
     let hrs = date.getHours();
     let mins = date.getMinutes();
     let secs = date.getSeconds();
-    let getDate = document.getElementById('displayDate').innerText = date.toDateString();
+    let getDate = document.getElementById('displayDate').innerText = date.toDateString(); // To Show Date String
     // Updating innerText
     hrs = hr.innerText = hrs;
     // hrs = hr.innerText = 24;
